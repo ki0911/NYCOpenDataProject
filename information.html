@@ -1,51 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYC Death Data</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Analysis</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-   <div id="banner" class="container center">
-      <h1> information </h1>
+    <link href="c3-eb4b9be8.css" rel="stylesheet" type="text/css" />
+    <script src="d3-5.8.2.min-c5268e33.js"></script>
+    <script src="c3.min-d2a1f852.js"></script>
+  </head>
+  <body id="body">
+    <script src="script.js"></script>
+
+    <div id="banner" class="container center">
+      <h1>Analysis</h1>
     </div>
-      <div>
-                  <div class="menu">
-            <ul>
-                <li><a href="home.html" >Homepage</a></li>
-                <li><a href="information.html"  >Information</a></li>
-                <li><a href="analysis.html"  >Analysis</a></li>
-            </ul>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="home.html">Homepage</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+      </ul>
+    </nav>
+
+    <section class="filters-section">
+      <div class="filters-container">
+        <div class="filter-group">
+          <label for="yearFilter">Year:</label>
+          <select id="yearFilter">
+            <option value="all">All Years</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+          </select>
+
+          <label for="causeFilter">Cause:</label>
+          <select id="causeFilter">
+            <option value="all">All Causes</option>
+            <option value="nep">Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27)</option>
+            <option value="ma">Malignant Neoplasms (Cancer: C00-C97)</option>
+            <option value="other">All Other Causes</option>
+            <option value="cere">Cerebrovascular Disease (Stroke: I60-I69)</option>
+            <option value="dise">Disease of Heart (I00-I09, I11, I13, I20-I51)</option>
+            <option value="flu">Influenza (Flu) and Pneumonia (J09-J18)</option>
+            <option value="alz">Alzheimer's Disease (G30)</option>
+            <option value="essential">Essential Hypertension and Renal Diseases (I10, I12)</option>
+          </select>
         </div>
+      </div>
+    </section>
 
-        <section class="filters-section">
-            <div class="filters-container">
-                <div class="filter-group">
-                    <label for="yearFilter">Year:</label>
-                    <select id="yearFilter">
-                        <option value="all">All Years</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="causeFilter">Cause:</label>
-                    <select id="causeFilter">
-                        <option value="all">All Causes</option>
-                    </select>
-                </div>
-            </div>
-        </section>
+    <section class="data-section">
+      <div id="dataContainer" class="cards-container">
 
-        <section class="data-section">
-            <div id="dataContainer" class="cards-container">
-            </div>
-        </section>
-    </main>
+      </div>
+    </section>
 
     <footer>
-        <p>Data from <a href="https://data.cityofnewyork.us/Health/Leading-Causes-of-Death-New-York-City/jb7j-dtam" target="_blank">NYC Open Data</a></p>
+      <p>Data from <a href="https://data.cityofnewyork.us/Health/Leading-Causes-of-Death-New-York-City/jb7j-dtam" target="_blank">NYC Open Data</a></p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html> 
+    <script src="information.js"></script>
+  </body>
+</html>
